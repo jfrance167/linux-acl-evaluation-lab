@@ -1,0 +1,6 @@
+{
+  "permit": 0,
+  "deny": 1,
+  "unsupported": 2,
+  "optimized_demo": 0
+}

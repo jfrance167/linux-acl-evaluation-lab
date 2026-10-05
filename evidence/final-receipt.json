@@ -1,0 +1,76 @@
+{
+  "phase": "approved_local_stages_complete_after_cli_delivery_correction",
+  "implementation_commit": "6223c3416050255172b0cd786cf3fbb0450f0fdb",
+  "branch": "codex/initial-acl-evaluation",
+  "source_hash_matches": {
+    "tests/test_cli_process.py": true,
+    "acl_lab/fixtures.py": true,
+    "tools/verify_workflows.py": true,
+    "tools/check_mutations.py": true,
+    "acl_lab/core.py": true,
+    "acl_lab/__main__.py": true,
+    "tests/test_core.py": true,
+    "acl_lab/__init__.py": true,
+    "tests/test_cli.py": true
+  },
+  "oracle_sha256": "b788e794ab0a538ffe47852077d4aa1bef6aa77569d8aab477415f94abfc5846",
+  "normal_tests": 32,
+  "optimized_tests": 32,
+  "independent_oracles": 13,
+  "property_checks_per_suite": 5544,
+  "mutations_detected": 3,
+  "mutation_assertion_failures": [
+    1,
+    1,
+    1
+  ],
+  "mutation_errors": [
+    0,
+    0,
+    0
+  ],
+  "restored_passes": 3,
+  "bandit_findings": 0,
+  "bandit_errors": 0,
+  "bandit_exclusions": 0,
+  "real_cli_exits": [
+    0,
+    1,
+    2
+  ],
+  "vault_note": "C:/Users/Jake/Downloads/Jakes Vault/01 Projects/Linux Access ACL Evaluation Lab.md",
+  "vault_sha256": "2fcf8379f4eb179f1d1a70e9c6f3cd772ed655ff2d4af7ac11a019e6f3738666",
+  "prior_five_clean_at_completion": "original checkpoint; no new old-lab verification claimed",
+  "prior_suites_rerun": false,
+  "actual_access": "unverified",
+  "actual_acl": "unverified",
+  "linux_runtime": "not_run",
+  "hosted_actions": "not_run",
+  "codeql": "not_run",
+  "publication": false,
+  "independent_review": false,
+  "pre_fix_commit": "4d961c1ba728a87153ec50837843562470407ee6",
+  "bandit_loc": 409,
+  "real_children_per_suite": 26,
+  "native_children_and_controls_per_suite": 14,
+  "synthetic_dirty_stream_children_per_suite": 12,
+  "child_mode_coverage": [
+    "normal",
+    "optimized"
+  ],
+  "real_child_exits_per_suite": {
+    "3": 22,
+    "0": 2,
+    "2": 2,
+    "120": 0
+  },
+  "before_fix_closed_pipes_exit": 120,
+  "after_fix_closed_pipes_exit": 3,
+  "closed_pipe_evidence": "evidence/cli-fix/processes.json; processes-optimized.json",
+  "current_tests_evidence": "evidence/cli-fix/tests.txt; tests-optimized.txt",
+  "current_bandit_evidence": "evidence/cli-fix/bandit.json",
+  "current_mutation_evidence": "evidence/cli-fix/mutations.json",
+  "vault_correction_note": "C:/Users/Jake/Downloads/Jakes Vault/01 Projects/Linux Access ACL Evaluation Lab - CLI Delivery Correction.md",
+  "vault_correction_sha256": "eb25a4d720fa43b2aa3484308d13bb8d9bea8c96e1b9fe3a9aa32e47666a427b",
+  "original_evidence_preserved": true
+}

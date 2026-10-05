@@ -1,0 +1,3 @@
+* text=auto eol=lf
+# Preserve original frozen oracle bytes and their pre-implementation digest.
+fixtures/oracles.json -text

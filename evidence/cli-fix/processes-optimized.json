@@ -1,0 +1,342 @@
+[
+  {
+    "args": [
+      "analyze"
+    ],
+    "optimized": false,
+    "closed": [
+      "stdout",
+      "stderr"
+    ],
+    "barrier": false,
+    "synthetic_stream_fault": null,
+    "exit": 3,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "analyze"
+    ],
+    "optimized": false,
+    "closed": [
+      "stdout"
+    ],
+    "barrier": false,
+    "synthetic_stream_fault": null,
+    "exit": 3,
+    "stdout": "",
+    "stderr": "{\"error\":\"input_or_output_failure\"}\r\n"
+  },
+  {
+    "args": [
+      "analyze"
+    ],
+    "optimized": true,
+    "closed": [
+      "stdout",
+      "stderr"
+    ],
+    "barrier": false,
+    "synthetic_stream_fault": null,
+    "exit": 3,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "analyze"
+    ],
+    "optimized": true,
+    "closed": [
+      "stdout"
+    ],
+    "barrier": false,
+    "synthetic_stream_fault": null,
+    "exit": 3,
+    "stdout": "",
+    "stderr": "{\"error\":\"input_or_output_failure\"}\r\n"
+  },
+  {
+    "args": [
+      "analyze"
+    ],
+    "optimized": false,
+    "closed": [],
+    "barrier": true,
+    "synthetic_stream_fault": "stdout_short",
+    "exit": 3,
+    "stdout": "",
+    "stderr": "{\"error\":\"input_or_output_failure\"}\r\n"
+  },
+  {
+    "args": [
+      "analyze"
+    ],
+    "optimized": false,
+    "closed": [],
+    "barrier": true,
+    "synthetic_stream_fault": "stdout_flush",
+    "exit": 3,
+    "stdout": "",
+    "stderr": "{\"error\":\"input_or_output_failure\"}\r\n"
+  },
+  {
+    "args": [
+      "--help"
+    ],
+    "optimized": false,
+    "closed": [],
+    "barrier": true,
+    "synthetic_stream_fault": "stdout_short",
+    "exit": 3,
+    "stdout": "",
+    "stderr": "{\"error\":\"input_or_output_failure\"}\r\n"
+  },
+  {
+    "args": [
+      "--help"
+    ],
+    "optimized": false,
+    "closed": [],
+    "barrier": true,
+    "synthetic_stream_fault": "stdout_flush",
+    "exit": 3,
+    "stdout": "",
+    "stderr": "{\"error\":\"input_or_output_failure\"}\r\n"
+  },
+  {
+    "args": [
+      "invalid"
+    ],
+    "optimized": false,
+    "closed": [],
+    "barrier": true,
+    "synthetic_stream_fault": "stderr_short",
+    "exit": 3,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "invalid"
+    ],
+    "optimized": false,
+    "closed": [],
+    "barrier": true,
+    "synthetic_stream_fault": "stderr_flush",
+    "exit": 3,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "analyze"
+    ],
+    "optimized": true,
+    "closed": [],
+    "barrier": true,
+    "synthetic_stream_fault": "stdout_short",
+    "exit": 3,
+    "stdout": "",
+    "stderr": "{\"error\":\"input_or_output_failure\"}\r\n"
+  },
+  {
+    "args": [
+      "analyze"
+    ],
+    "optimized": true,
+    "closed": [],
+    "barrier": true,
+    "synthetic_stream_fault": "stdout_flush",
+    "exit": 3,
+    "stdout": "",
+    "stderr": "{\"error\":\"input_or_output_failure\"}\r\n"
+  },
+  {
+    "args": [
+      "--help"
+    ],
+    "optimized": true,
+    "closed": [],
+    "barrier": true,
+    "synthetic_stream_fault": "stdout_short",
+    "exit": 3,
+    "stdout": "",
+    "stderr": "{\"error\":\"input_or_output_failure\"}\r\n"
+  },
+  {
+    "args": [
+      "--help"
+    ],
+    "optimized": true,
+    "closed": [],
+    "barrier": true,
+    "synthetic_stream_fault": "stdout_flush",
+    "exit": 3,
+    "stdout": "",
+    "stderr": "{\"error\":\"input_or_output_failure\"}\r\n"
+  },
+  {
+    "args": [
+      "invalid"
+    ],
+    "optimized": true,
+    "closed": [],
+    "barrier": true,
+    "synthetic_stream_fault": "stderr_short",
+    "exit": 3,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "invalid"
+    ],
+    "optimized": true,
+    "closed": [],
+    "barrier": true,
+    "synthetic_stream_fault": "stderr_flush",
+    "exit": 3,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "--help"
+    ],
+    "optimized": false,
+    "closed": [],
+    "barrier": false,
+    "synthetic_stream_fault": null,
+    "exit": 0,
+    "stdout": "usage: __main__.py [-h] {analyze,demo}\r\n\r\nInvented access ACL model; actual host access unverified\r\n\r\npositional arguments:\r\n  {analyze,demo}\r\n\r\noptions:\r\n  -h, --help      show this help message and exit\r\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "analyze"
+    ],
+    "optimized": false,
+    "closed": [
+      "stderr"
+    ],
+    "barrier": false,
+    "synthetic_stream_fault": null,
+    "exit": 2,
+    "stdout": "{\"status\":\"rejected\",\"complete\":false,\"reason\":\"object_shape\",\"actual_access\":\"unverified\",\"actual_acl\":\"unverified\",\"assumptions\":[\"invented_filesystem_ids\",\"identity_mapping_assumed\",\"declared_context_only\",\"normalized_access_acl\"],\"not_verified\":[\"actual_access\",\"actual_acl\",\"context_truth\",\"identity_mapping\",\"ancestor_search\",\"full_system_policy\"]}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "--help"
+    ],
+    "optimized": true,
+    "closed": [],
+    "barrier": false,
+    "synthetic_stream_fault": null,
+    "exit": 0,
+    "stdout": "usage: __main__.py [-h] {analyze,demo}\r\n\r\nInvented access ACL model; actual host access unverified\r\n\r\npositional arguments:\r\n  {analyze,demo}\r\n\r\noptions:\r\n  -h, --help      show this help message and exit\r\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "analyze"
+    ],
+    "optimized": true,
+    "closed": [
+      "stderr"
+    ],
+    "barrier": false,
+    "synthetic_stream_fault": null,
+    "exit": 2,
+    "stdout": "{\"status\":\"rejected\",\"complete\":false,\"reason\":\"object_shape\",\"actual_access\":\"unverified\",\"actual_acl\":\"unverified\",\"assumptions\":[\"invented_filesystem_ids\",\"identity_mapping_assumed\",\"declared_context_only\",\"normalized_access_acl\"],\"not_verified\":[\"actual_access\",\"actual_acl\",\"context_truth\",\"identity_mapping\",\"ancestor_search\",\"full_system_policy\"]}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "--help"
+    ],
+    "optimized": false,
+    "closed": [
+      "stdout",
+      "stderr"
+    ],
+    "barrier": true,
+    "synthetic_stream_fault": null,
+    "exit": 3,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "--help"
+    ],
+    "optimized": false,
+    "closed": [
+      "stdout"
+    ],
+    "barrier": true,
+    "synthetic_stream_fault": null,
+    "exit": 3,
+    "stdout": "",
+    "stderr": "{\"error\":\"input_or_output_failure\"}\r\n"
+  },
+  {
+    "args": [
+      "invalid"
+    ],
+    "optimized": false,
+    "closed": [
+      "stderr"
+    ],
+    "barrier": true,
+    "synthetic_stream_fault": null,
+    "exit": 3,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "--help"
+    ],
+    "optimized": true,
+    "closed": [
+      "stdout",
+      "stderr"
+    ],
+    "barrier": true,
+    "synthetic_stream_fault": null,
+    "exit": 3,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "--help"
+    ],
+    "optimized": true,
+    "closed": [
+      "stdout"
+    ],
+    "barrier": true,
+    "synthetic_stream_fault": null,
+    "exit": 3,
+    "stdout": "",
+    "stderr": "{\"error\":\"input_or_output_failure\"}\r\n"
+  },
+  {
+    "args": [
+      "invalid"
+    ],
+    "optimized": true,
+    "closed": [
+      "stderr"
+    ],
+    "barrier": true,
+    "synthetic_stream_fault": null,
+    "exit": 3,
+    "stdout": "",
+    "stderr": ""
+  }
+]

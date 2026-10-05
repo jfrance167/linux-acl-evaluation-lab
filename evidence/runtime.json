@@ -1,0 +1,15 @@
+{
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "win32",
+  "security_tools": {
+    "bandit": "1.9.4",
+    "PyYAML": "6.0.3",
+    "rich": "15.0.0",
+    "stevedore": "5.9.1",
+    "colorama": "0.4.6",
+    "markdown-it-py": "4.2.0",
+    "mdurl": "0.1.2",
+    "Pygments": "2.21.0"
+  },
+  "installed_for_this_lab": false
+}

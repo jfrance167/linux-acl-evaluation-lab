@@ -1,0 +1,978 @@
+[
+  {
+    "id": "owner_unmasked",
+    "request": {
+      "version": 1,
+      "profile": "linux_access_acl_v1",
+      "subject": {
+        "fsuid": 101,
+        "fsgid": 20,
+        "supplementary_gids": []
+      },
+      "object": {
+        "id": "Invented",
+        "kind": "regular",
+        "owner_uid": 101,
+        "owning_gid": 10,
+        "acl": {
+          "owner": 4,
+          "users": [
+            {
+              "uid": 101,
+              "permissions": 7
+            }
+          ],
+          "group": 7,
+          "groups": [],
+          "mask": 0,
+          "other": 7
+        }
+      },
+      "request_bits": 4,
+      "context": {
+        "acl_kind": "access",
+        "dialect": "linux_posix",
+        "excluded_features": []
+      }
+    },
+    "expected": {
+      "status": "model_complete",
+      "complete": true,
+      "reason": "normalized_acl_predicates_only",
+      "actual_access": "unverified",
+      "actual_acl": "unverified",
+      "assumptions": [
+        "invented_filesystem_ids",
+        "identity_mapping_assumed",
+        "declared_context_only",
+        "normalized_access_acl"
+      ],
+      "not_verified": [
+        "actual_access",
+        "actual_acl",
+        "context_truth",
+        "identity_mapping",
+        "ancestor_search",
+        "full_system_policy"
+      ],
+      "object_id": "Invented",
+      "branch": "owner",
+      "request_bits": 4,
+      "bit1_semantics": "execute_bit",
+      "model_permits": true,
+      "checks": [
+        {
+          "entry_type": "owner",
+          "qualifier": null,
+          "raw_bits": 4,
+          "mask_bits": null,
+          "effective_bits": 4,
+          "covers_request": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "owner_no_fallback",
+    "request": {
+      "version": 1,
+      "profile": "linux_access_acl_v1",
+      "subject": {
+        "fsuid": 101,
+        "fsgid": 10,
+        "supplementary_gids": []
+      },
+      "object": {
+        "id": "Invented",
+        "kind": "regular",
+        "owner_uid": 101,
+        "owning_gid": 10,
+        "acl": {
+          "owner": 0,
+          "users": [
+            {
+              "uid": 101,
+              "permissions": 7
+            }
+          ],
+          "group": 7,
+          "groups": [],
+          "mask": 7,
+          "other": 7
+        }
+      },
+      "request_bits": 4,
+      "context": {
+        "acl_kind": "access",
+        "dialect": "linux_posix",
+        "excluded_features": []
+      }
+    },
+    "expected": {
+      "status": "model_complete",
+      "complete": true,
+      "reason": "normalized_acl_predicates_only",
+      "actual_access": "unverified",
+      "actual_acl": "unverified",
+      "assumptions": [
+        "invented_filesystem_ids",
+        "identity_mapping_assumed",
+        "declared_context_only",
+        "normalized_access_acl"
+      ],
+      "not_verified": [
+        "actual_access",
+        "actual_acl",
+        "context_truth",
+        "identity_mapping",
+        "ancestor_search",
+        "full_system_policy"
+      ],
+      "object_id": "Invented",
+      "branch": "owner",
+      "request_bits": 4,
+      "bit1_semantics": "execute_bit",
+      "model_permits": false,
+      "checks": [
+        {
+          "entry_type": "owner",
+          "qualifier": null,
+          "raw_bits": 0,
+          "mask_bits": null,
+          "effective_bits": 0,
+          "covers_request": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "named_masked",
+    "request": {
+      "version": 1,
+      "profile": "linux_access_acl_v1",
+      "subject": {
+        "fsuid": 202,
+        "fsgid": 10,
+        "supplementary_gids": []
+      },
+      "object": {
+        "id": "Invented",
+        "kind": "regular",
+        "owner_uid": 101,
+        "owning_gid": 10,
+        "acl": {
+          "owner": 0,
+          "users": [
+            {
+              "uid": 202,
+              "permissions": 6
+            }
+          ],
+          "group": 7,
+          "groups": [],
+          "mask": 4,
+          "other": 7
+        }
+      },
+      "request_bits": 6,
+      "context": {
+        "acl_kind": "access",
+        "dialect": "linux_posix",
+        "excluded_features": []
+      }
+    },
+    "expected": {
+      "status": "model_complete",
+      "complete": true,
+      "reason": "normalized_acl_predicates_only",
+      "actual_access": "unverified",
+      "actual_acl": "unverified",
+      "assumptions": [
+        "invented_filesystem_ids",
+        "identity_mapping_assumed",
+        "declared_context_only",
+        "normalized_access_acl"
+      ],
+      "not_verified": [
+        "actual_access",
+        "actual_acl",
+        "context_truth",
+        "identity_mapping",
+        "ancestor_search",
+        "full_system_policy"
+      ],
+      "object_id": "Invented",
+      "branch": "named_user",
+      "request_bits": 6,
+      "bit1_semantics": "execute_bit",
+      "model_permits": false,
+      "checks": [
+        {
+          "entry_type": "named_user",
+          "qualifier": 202,
+          "raw_bits": 6,
+          "mask_bits": 4,
+          "effective_bits": 4,
+          "covers_request": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "named_complete",
+    "request": {
+      "version": 1,
+      "profile": "linux_access_acl_v1",
+      "subject": {
+        "fsuid": 202,
+        "fsgid": 20,
+        "supplementary_gids": []
+      },
+      "object": {
+        "id": "Invented",
+        "kind": "regular",
+        "owner_uid": 101,
+        "owning_gid": 10,
+        "acl": {
+          "owner": 0,
+          "users": [
+            {
+              "uid": 202,
+              "permissions": 6
+            }
+          ],
+          "group": 0,
+          "groups": [],
+          "mask": 6,
+          "other": 0
+        }
+      },
+      "request_bits": 6,
+      "context": {
+        "acl_kind": "access",
+        "dialect": "linux_posix",
+        "excluded_features": []
+      }
+    },
+    "expected": {
+      "status": "model_complete",
+      "complete": true,
+      "reason": "normalized_acl_predicates_only",
+      "actual_access": "unverified",
+      "actual_acl": "unverified",
+      "assumptions": [
+        "invented_filesystem_ids",
+        "identity_mapping_assumed",
+        "declared_context_only",
+        "normalized_access_acl"
+      ],
+      "not_verified": [
+        "actual_access",
+        "actual_acl",
+        "context_truth",
+        "identity_mapping",
+        "ancestor_search",
+        "full_system_policy"
+      ],
+      "object_id": "Invented",
+      "branch": "named_user",
+      "request_bits": 6,
+      "bit1_semantics": "execute_bit",
+      "model_permits": true,
+      "checks": [
+        {
+          "entry_type": "named_user",
+          "qualifier": 202,
+          "raw_bits": 6,
+          "mask_bits": 6,
+          "effective_bits": 6,
+          "covers_request": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "named_no_group_fallback",
+    "request": {
+      "version": 1,
+      "profile": "linux_access_acl_v1",
+      "subject": {
+        "fsuid": 202,
+        "fsgid": 20,
+        "supplementary_gids": [
+          30
+        ]
+      },
+      "object": {
+        "id": "Invented",
+        "kind": "regular",
+        "owner_uid": 101,
+        "owning_gid": 10,
+        "acl": {
+          "owner": 0,
+          "users": [
+            {
+              "uid": 202,
+              "permissions": 0
+            }
+          ],
+          "group": 0,
+          "groups": [
+            {
+              "gid": 20,
+              "permissions": 7
+            },
+            {
+              "gid": 30,
+              "permissions": 7
+            }
+          ],
+          "mask": 7,
+          "other": 7
+        }
+      },
+      "request_bits": 4,
+      "context": {
+        "acl_kind": "access",
+        "dialect": "linux_posix",
+        "excluded_features": []
+      }
+    },
+    "expected": {
+      "status": "model_complete",
+      "complete": true,
+      "reason": "normalized_acl_predicates_only",
+      "actual_access": "unverified",
+      "actual_acl": "unverified",
+      "assumptions": [
+        "invented_filesystem_ids",
+        "identity_mapping_assumed",
+        "declared_context_only",
+        "normalized_access_acl"
+      ],
+      "not_verified": [
+        "actual_access",
+        "actual_acl",
+        "context_truth",
+        "identity_mapping",
+        "ancestor_search",
+        "full_system_policy"
+      ],
+      "object_id": "Invented",
+      "branch": "named_user",
+      "request_bits": 4,
+      "bit1_semantics": "execute_bit",
+      "model_permits": false,
+      "checks": [
+        {
+          "entry_type": "named_user",
+          "qualifier": 202,
+          "raw_bits": 0,
+          "mask_bits": 7,
+          "effective_bits": 0,
+          "covers_request": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "split_groups",
+    "request": {
+      "version": 1,
+      "profile": "linux_access_acl_v1",
+      "subject": {
+        "fsuid": 303,
+        "fsgid": 20,
+        "supplementary_gids": [
+          30
+        ]
+      },
+      "object": {
+        "id": "Invented",
+        "kind": "regular",
+        "owner_uid": 101,
+        "owning_gid": 10,
+        "acl": {
+          "owner": 0,
+          "users": [],
+          "group": 0,
+          "groups": [
+            {
+              "gid": 20,
+              "permissions": 4
+            },
+            {
+              "gid": 30,
+              "permissions": 2
+            }
+          ],
+          "mask": 6,
+          "other": 7
+        }
+      },
+      "request_bits": 6,
+      "context": {
+        "acl_kind": "access",
+        "dialect": "linux_posix",
+        "excluded_features": []
+      }
+    },
+    "expected": {
+      "status": "model_complete",
+      "complete": true,
+      "reason": "normalized_acl_predicates_only",
+      "actual_access": "unverified",
+      "actual_acl": "unverified",
+      "assumptions": [
+        "invented_filesystem_ids",
+        "identity_mapping_assumed",
+        "declared_context_only",
+        "normalized_access_acl"
+      ],
+      "not_verified": [
+        "actual_access",
+        "actual_acl",
+        "context_truth",
+        "identity_mapping",
+        "ancestor_search",
+        "full_system_policy"
+      ],
+      "object_id": "Invented",
+      "branch": "group_entries",
+      "request_bits": 6,
+      "bit1_semantics": "execute_bit",
+      "model_permits": false,
+      "checks": [
+        {
+          "entry_type": "named_group",
+          "qualifier": 20,
+          "raw_bits": 4,
+          "mask_bits": 6,
+          "effective_bits": 4,
+          "covers_request": false
+        },
+        {
+          "entry_type": "named_group",
+          "qualifier": 30,
+          "raw_bits": 2,
+          "mask_bits": 6,
+          "effective_bits": 2,
+          "covers_request": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "split_read",
+    "request": {
+      "version": 1,
+      "profile": "linux_access_acl_v1",
+      "subject": {
+        "fsuid": 303,
+        "fsgid": 20,
+        "supplementary_gids": [
+          30
+        ]
+      },
+      "object": {
+        "id": "Invented",
+        "kind": "regular",
+        "owner_uid": 101,
+        "owning_gid": 10,
+        "acl": {
+          "owner": 0,
+          "users": [],
+          "group": 0,
+          "groups": [
+            {
+              "gid": 20,
+              "permissions": 4
+            },
+            {
+              "gid": 30,
+              "permissions": 2
+            }
+          ],
+          "mask": 6,
+          "other": 0
+        }
+      },
+      "request_bits": 4,
+      "context": {
+        "acl_kind": "access",
+        "dialect": "linux_posix",
+        "excluded_features": []
+      }
+    },
+    "expected": {
+      "status": "model_complete",
+      "complete": true,
+      "reason": "normalized_acl_predicates_only",
+      "actual_access": "unverified",
+      "actual_acl": "unverified",
+      "assumptions": [
+        "invented_filesystem_ids",
+        "identity_mapping_assumed",
+        "declared_context_only",
+        "normalized_access_acl"
+      ],
+      "not_verified": [
+        "actual_access",
+        "actual_acl",
+        "context_truth",
+        "identity_mapping",
+        "ancestor_search",
+        "full_system_policy"
+      ],
+      "object_id": "Invented",
+      "branch": "group_entries",
+      "request_bits": 4,
+      "bit1_semantics": "execute_bit",
+      "model_permits": true,
+      "checks": [
+        {
+          "entry_type": "named_group",
+          "qualifier": 20,
+          "raw_bits": 4,
+          "mask_bits": 6,
+          "effective_bits": 4,
+          "covers_request": true
+        },
+        {
+          "entry_type": "named_group",
+          "qualifier": 30,
+          "raw_bits": 2,
+          "mask_bits": 6,
+          "effective_bits": 2,
+          "covers_request": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "later_same_gid",
+    "request": {
+      "version": 1,
+      "profile": "linux_access_acl_v1",
+      "subject": {
+        "fsuid": 303,
+        "fsgid": 10,
+        "supplementary_gids": []
+      },
+      "object": {
+        "id": "Invented",
+        "kind": "regular",
+        "owner_uid": 101,
+        "owning_gid": 10,
+        "acl": {
+          "owner": 0,
+          "users": [],
+          "group": 4,
+          "groups": [
+            {
+              "gid": 10,
+              "permissions": 6
+            }
+          ],
+          "mask": 6,
+          "other": 0
+        }
+      },
+      "request_bits": 6,
+      "context": {
+        "acl_kind": "access",
+        "dialect": "linux_posix",
+        "excluded_features": []
+      }
+    },
+    "expected": {
+      "status": "model_complete",
+      "complete": true,
+      "reason": "normalized_acl_predicates_only",
+      "actual_access": "unverified",
+      "actual_acl": "unverified",
+      "assumptions": [
+        "invented_filesystem_ids",
+        "identity_mapping_assumed",
+        "declared_context_only",
+        "normalized_access_acl"
+      ],
+      "not_verified": [
+        "actual_access",
+        "actual_acl",
+        "context_truth",
+        "identity_mapping",
+        "ancestor_search",
+        "full_system_policy"
+      ],
+      "object_id": "Invented",
+      "branch": "group_entries",
+      "request_bits": 6,
+      "bit1_semantics": "execute_bit",
+      "model_permits": true,
+      "checks": [
+        {
+          "entry_type": "owning_group",
+          "qualifier": 10,
+          "raw_bits": 4,
+          "mask_bits": 6,
+          "effective_bits": 4,
+          "covers_request": false
+        },
+        {
+          "entry_type": "named_group",
+          "qualifier": 10,
+          "raw_bits": 6,
+          "mask_bits": 6,
+          "effective_bits": 6,
+          "covers_request": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "group_no_other_fallback",
+    "request": {
+      "version": 1,
+      "profile": "linux_access_acl_v1",
+      "subject": {
+        "fsuid": 303,
+        "fsgid": 10,
+        "supplementary_gids": []
+      },
+      "object": {
+        "id": "Invented",
+        "kind": "regular",
+        "owner_uid": 101,
+        "owning_gid": 10,
+        "acl": {
+          "owner": 0,
+          "users": [],
+          "group": 0,
+          "groups": [],
+          "mask": null,
+          "other": 7
+        }
+      },
+      "request_bits": 4,
+      "context": {
+        "acl_kind": "access",
+        "dialect": "linux_posix",
+        "excluded_features": []
+      }
+    },
+    "expected": {
+      "status": "model_complete",
+      "complete": true,
+      "reason": "normalized_acl_predicates_only",
+      "actual_access": "unverified",
+      "actual_acl": "unverified",
+      "assumptions": [
+        "invented_filesystem_ids",
+        "identity_mapping_assumed",
+        "declared_context_only",
+        "normalized_access_acl"
+      ],
+      "not_verified": [
+        "actual_access",
+        "actual_acl",
+        "context_truth",
+        "identity_mapping",
+        "ancestor_search",
+        "full_system_policy"
+      ],
+      "object_id": "Invented",
+      "branch": "group_entries",
+      "request_bits": 4,
+      "bit1_semantics": "execute_bit",
+      "model_permits": false,
+      "checks": [
+        {
+          "entry_type": "owning_group",
+          "qualifier": 10,
+          "raw_bits": 0,
+          "mask_bits": null,
+          "effective_bits": 0,
+          "covers_request": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "other_unmasked",
+    "request": {
+      "version": 1,
+      "profile": "linux_access_acl_v1",
+      "subject": {
+        "fsuid": 303,
+        "fsgid": 99,
+        "supplementary_gids": []
+      },
+      "object": {
+        "id": "Invented",
+        "kind": "regular",
+        "owner_uid": 101,
+        "owning_gid": 10,
+        "acl": {
+          "owner": 0,
+          "users": [],
+          "group": 0,
+          "groups": [
+            {
+              "gid": 20,
+              "permissions": 7
+            }
+          ],
+          "mask": 0,
+          "other": 7
+        }
+      },
+      "request_bits": 6,
+      "context": {
+        "acl_kind": "access",
+        "dialect": "linux_posix",
+        "excluded_features": []
+      }
+    },
+    "expected": {
+      "status": "model_complete",
+      "complete": true,
+      "reason": "normalized_acl_predicates_only",
+      "actual_access": "unverified",
+      "actual_acl": "unverified",
+      "assumptions": [
+        "invented_filesystem_ids",
+        "identity_mapping_assumed",
+        "declared_context_only",
+        "normalized_access_acl"
+      ],
+      "not_verified": [
+        "actual_access",
+        "actual_acl",
+        "context_truth",
+        "identity_mapping",
+        "ancestor_search",
+        "full_system_policy"
+      ],
+      "object_id": "Invented",
+      "branch": "other",
+      "request_bits": 6,
+      "bit1_semantics": "execute_bit",
+      "model_permits": true,
+      "checks": [
+        {
+          "entry_type": "other",
+          "qualifier": null,
+          "raw_bits": 7,
+          "mask_bits": null,
+          "effective_bits": 7,
+          "covers_request": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "basic_no_mask",
+    "request": {
+      "version": 1,
+      "profile": "linux_access_acl_v1",
+      "subject": {
+        "fsuid": 303,
+        "fsgid": 10,
+        "supplementary_gids": []
+      },
+      "object": {
+        "id": "Invented",
+        "kind": "regular",
+        "owner_uid": 101,
+        "owning_gid": 10,
+        "acl": {
+          "owner": 0,
+          "users": [],
+          "group": 6,
+          "groups": [],
+          "mask": null,
+          "other": 0
+        }
+      },
+      "request_bits": 6,
+      "context": {
+        "acl_kind": "access",
+        "dialect": "linux_posix",
+        "excluded_features": []
+      }
+    },
+    "expected": {
+      "status": "model_complete",
+      "complete": true,
+      "reason": "normalized_acl_predicates_only",
+      "actual_access": "unverified",
+      "actual_acl": "unverified",
+      "assumptions": [
+        "invented_filesystem_ids",
+        "identity_mapping_assumed",
+        "declared_context_only",
+        "normalized_access_acl"
+      ],
+      "not_verified": [
+        "actual_access",
+        "actual_acl",
+        "context_truth",
+        "identity_mapping",
+        "ancestor_search",
+        "full_system_policy"
+      ],
+      "object_id": "Invented",
+      "branch": "group_entries",
+      "request_bits": 6,
+      "bit1_semantics": "execute_bit",
+      "model_permits": true,
+      "checks": [
+        {
+          "entry_type": "owning_group",
+          "qualifier": 10,
+          "raw_bits": 6,
+          "mask_bits": null,
+          "effective_bits": 6,
+          "covers_request": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "basic_with_mask",
+    "request": {
+      "version": 1,
+      "profile": "linux_access_acl_v1",
+      "subject": {
+        "fsuid": 303,
+        "fsgid": 10,
+        "supplementary_gids": []
+      },
+      "object": {
+        "id": "Invented",
+        "kind": "regular",
+        "owner_uid": 101,
+        "owning_gid": 10,
+        "acl": {
+          "owner": 0,
+          "users": [],
+          "group": 6,
+          "groups": [],
+          "mask": 4,
+          "other": 0
+        }
+      },
+      "request_bits": 6,
+      "context": {
+        "acl_kind": "access",
+        "dialect": "linux_posix",
+        "excluded_features": []
+      }
+    },
+    "expected": {
+      "status": "model_complete",
+      "complete": true,
+      "reason": "normalized_acl_predicates_only",
+      "actual_access": "unverified",
+      "actual_acl": "unverified",
+      "assumptions": [
+        "invented_filesystem_ids",
+        "identity_mapping_assumed",
+        "declared_context_only",
+        "normalized_access_acl"
+      ],
+      "not_verified": [
+        "actual_access",
+        "actual_acl",
+        "context_truth",
+        "identity_mapping",
+        "ancestor_search",
+        "full_system_policy"
+      ],
+      "object_id": "Invented",
+      "branch": "group_entries",
+      "request_bits": 6,
+      "bit1_semantics": "execute_bit",
+      "model_permits": false,
+      "checks": [
+        {
+          "entry_type": "owning_group",
+          "qualifier": 10,
+          "raw_bits": 6,
+          "mask_bits": 4,
+          "effective_bits": 4,
+          "covers_request": false
+        }
+      ]
+    }
+  },
+  {
+    "id": "gid_zero_ordinary",
+    "request": {
+      "version": 1,
+      "profile": "linux_access_acl_v1",
+      "subject": {
+        "fsuid": 303,
+        "fsgid": 0,
+        "supplementary_gids": []
+      },
+      "object": {
+        "id": "Invented",
+        "kind": "regular",
+        "owner_uid": 101,
+        "owning_gid": 0,
+        "acl": {
+          "owner": 0,
+          "users": [],
+          "group": 0,
+          "groups": [],
+          "mask": null,
+          "other": 7
+        }
+      },
+      "request_bits": 4,
+      "context": {
+        "acl_kind": "access",
+        "dialect": "linux_posix",
+        "excluded_features": []
+      }
+    },
+    "expected": {
+      "status": "model_complete",
+      "complete": true,
+      "reason": "normalized_acl_predicates_only",
+      "actual_access": "unverified",
+      "actual_acl": "unverified",
+      "assumptions": [
+        "invented_filesystem_ids",
+        "identity_mapping_assumed",
+        "declared_context_only",
+        "normalized_access_acl"
+      ],
+      "not_verified": [
+        "actual_access",
+        "actual_acl",
+        "context_truth",
+        "identity_mapping",
+        "ancestor_search",
+        "full_system_policy"
+      ],
+      "object_id": "Invented",
+      "branch": "group_entries",
+      "request_bits": 4,
+      "bit1_semantics": "execute_bit",
+      "model_permits": false,
+      "checks": [
+        {
+          "entry_type": "owning_group",
+          "qualifier": 0,
+          "raw_bits": 0,
+          "mask_bits": null,
+          "effective_bits": 0,
+          "covers_request": false
+        }
+      ]
+    }
+  }
+]

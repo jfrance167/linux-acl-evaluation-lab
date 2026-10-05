@@ -1,0 +1,6 @@
+{
+  "phase": "frozen_before_core",
+  "core_exists": false,
+  "oracles": 13,
+  "sha256": "b788e794ab0a538ffe47852077d4aa1bef6aa77569d8aab477415f94abfc5846"
+}

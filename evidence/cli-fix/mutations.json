@@ -1,0 +1,49 @@
+{
+  "mutations": [
+    {
+      "mutation": "group_union",
+      "passed": false,
+      "assertion_failures": 1,
+      "errors": 0,
+      "tests_run": 1,
+      "detected": true
+    },
+    {
+      "mutation": "ignored_mask",
+      "passed": false,
+      "assertion_failures": 1,
+      "errors": 0,
+      "tests_run": 1,
+      "detected": true
+    },
+    {
+      "mutation": "other_fallback",
+      "passed": false,
+      "assertion_failures": 1,
+      "errors": 0,
+      "tests_run": 1,
+      "detected": true
+    }
+  ],
+  "restored": [
+    {
+      "passed": true,
+      "assertion_failures": 0,
+      "errors": 0,
+      "tests_run": 1
+    },
+    {
+      "passed": true,
+      "assertion_failures": 0,
+      "errors": 0,
+      "tests_run": 1
+    },
+    {
+      "passed": true,
+      "assertion_failures": 0,
+      "errors": 0,
+      "tests_run": 1
+    }
+  ],
+  "scope": "three in-memory logic faults; no source mutation"
+}

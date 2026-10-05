@@ -1,0 +1,37 @@
+test_demo (test_cli.CliTests.test_demo) ... ok
+test_exit_outcomes (test_cli.CliTests.test_exit_outcomes) ... ok
+test_failed_error_delivery (test_cli.CliTests.test_failed_error_delivery) ... ok
+test_failed_read_write_flush_and_short_write (test_cli.CliTests.test_failed_read_write_flush_and_short_write) ... ok
+test_help_short_write_and_failed_flush (test_cli.CliTests.test_help_short_write_and_failed_flush) ... ok
+test_input_read_is_bounded (test_cli.CliTests.test_input_read_is_bounded) ... ok
+test_output_limit_is_incomplete_exit_even_in_demo (test_cli.CliTests.test_output_limit_is_incomplete_exit_even_in_demo) ... ok
+test_short_and_failed_flush_diagnostics_detach_sinks (test_cli.CliTests.test_short_and_failed_flush_diagnostics_detach_sinks) ... ok
+test_unsupported_and_failed_demo_exits (test_cli.CliTests.test_unsupported_and_failed_demo_exits) ... ok
+test_analyze_closed_pipes_normal_and_optimized (test_cli_process.ProcessTests.test_analyze_closed_pipes_normal_and_optimized) ... ok
+test_child_dirty_short_and_flush_seams (test_cli_process.ProcessTests.test_child_dirty_short_and_flush_seams) ... ok
+test_healthy_help_and_unused_closed_stderr (test_cli_process.ProcessTests.test_healthy_help_and_unused_closed_stderr) ... ok
+test_help_and_parser_error_closed_pipes (test_cli_process.ProcessTests.test_help_and_parser_error_closed_pipes) ... ok
+test_all_validation_before_exclusions_or_owner (test_core.CoreTests.test_all_validation_before_exclusions_or_owner) ... ok
+test_basic_classes_and_directory (test_core.CoreTests.test_basic_classes_and_directory) ... ok
+test_context_errors_and_caps (test_core.CoreTests.test_context_errors_and_caps) ... ok
+test_core_forbidden_capabilities (test_core.CoreTests.test_core_forbidden_capabilities) ... ok
+test_custom_hooks_and_cycles_rejected (test_core.CoreTests.test_custom_hooks_and_cycles_rejected) ... ok
+test_exact_types_scalars_and_shapes (test_core.CoreTests.test_exact_types_scalars_and_shapes) ... ok
+test_formatter_trusted_seams (test_core.CoreTests.test_formatter_trusted_seams) ... ok
+test_frozen_full_oracles (test_core.CoreTests.test_frozen_full_oracles) ... ok
+test_independent_group_domain_3584 (test_core.CoreTests.test_independent_group_domain_3584) ... ok
+test_independent_named_domain_448 (test_core.CoreTests.test_independent_named_domain_448) ... ok
+test_later_group_and_distinct_same_gid (test_core.CoreTests.test_later_group_and_distinct_same_gid) ... ok
+test_mask_regression (test_core.CoreTests.test_mask_regression) ... ok
+test_mask_tightening_1512 (test_core.CoreTests.test_mask_tightening_1512) ... ok
+test_no_fallback_regression (test_core.CoreTests.test_no_fallback_regression) ... ok
+test_order_immutability_membership (test_core.CoreTests.test_order_immutability_membership) ... ok
+test_raw_bounds_and_strict_json (test_core.CoreTests.test_raw_bounds_and_strict_json) ... ok
+test_required_optional_masks_duplicates (test_core.CoreTests.test_required_optional_masks_duplicates) ... ok
+test_split_regression (test_core.CoreTests.test_split_regression) ... ok
+test_unsupported_reasons_and_common_schema (test_core.CoreTests.test_unsupported_reasons_and_common_schema) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 2.545s
+
+OK
