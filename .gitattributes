@@ -1,3 +1,30 @@
 * text=auto eol=lf
 # Preserve original frozen oracle bytes and their pre-implementation digest.
 fixtures/oracles.json -text
+
+# Preserve reviewed snapshot bytes across checkout platforms.
+/.github/dependabot.yml -text
+/.gitignore -text
+/PUBLICATION.md -text
+/README.md -text
+/evidence/bandit-exit.json -text
+/evidence/bandit-stderr.txt -text
+/evidence/bandit.json -text
+/evidence/cli-exits.json -text
+/evidence/cli-fix/bandit-stderr.txt -text
+/evidence/cli-fix/bandit.json -text
+/evidence/cli-fix/check-exits.json -text
+/evidence/cli-fix/mutations.json -text
+/evidence/cli-fix/normal-exit.json -text
+/evidence/cli-fix/optimized-exit.json -text
+/evidence/cli-fix/pre-fix-final-receipt.json -text
+/evidence/final-receipt.json -text
+/evidence/functional-exits.json -text
+/evidence/mutations.json -text
+/evidence/pip-check.txt -text
+/evidence/security-exits.json -text
+/evidence/tests-optimized.txt -text
+/evidence/tests.txt -text
+/evidence/workflows-optimized.json -text
+/evidence/workflows.json -text
+/research/oracle-freeze.json -text
